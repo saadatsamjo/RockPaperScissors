@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="icon" href="images/logo.png" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
     <title>RPS game</title>
@@ -29,8 +30,8 @@
         </div>
     
         <div class="middle-section"><!--------------------------------- middle section of the wrapper-container starts here -->
-            <h1 class="welcome-text">Welcome to Rock Paper Scissors Game!.</h1>
-            <h1 id="you-header-choice-header">To play, click on your throw.</h1>
+            <h1 class="welcome-text">WELCOME TO <span id="ROCK-PAPER-SCISSORS">ROCK PAPER SCISSORS</span> GAME!.</h1>
+            <h1 id="you-header-choice-header">To play, click on your throw</h1>
             <div class="choices-container"><!-------------------------- choices-container starts here -->
     
                 <div id="choice-cards-div">
@@ -61,7 +62,7 @@
 
              <div id="game-result-reveal" class="">
                 <h1 id="game-result-reveal-text">Game over! </br> You Won by 5 Points</h1>
-                <button id="replay-button" onclick="hideGameOver()">Replay</button>
+                <a id="replay-button-outer-link"><button id="replay-button" onclick="hideGameOver()">Replay</button></a>
              </div>
         </div><!---------------------------------------------------------- middle section of the wrapper-container starts here -->
     
@@ -103,7 +104,23 @@
     
     </div><!--------------------------------------------------------------- the MAIN wrapper-container ends here -->
 
+    <div class="social-links">
 
+        <a href="https://github.com/saadatsamjo" target="_blank" class="icon-link">
+            <i class="fab fa-github the-icons"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/saadatsamjo" target="_blank" class="icon-link">
+            <i class="fab fa-linkedin the-icons"></i>
+        </a>
+        <a href="mailto:samjosaadat@yahoo.com" class="icon-link">
+            <i class="fas fa-envelope the-icons"></i>
+        </a>
+
+    </div>
+
+    <div class="copyright">
+        <p>&copy; 2023 Saadat.</p>
+    </div>
     <!-- the js link -->
     <script src="file.js"></script>
 </body>
