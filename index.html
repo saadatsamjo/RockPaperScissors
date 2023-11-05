@@ -1,45 +1,110 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2487">
-  <style type="text/css">
-    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; -webkit-text-stroke: #000000; min-height: 14.0px}
-    p.p5 {margin: 0.0px 0.0px 0.0px 0.0px; font: 11.0px 'Helvetica Neue'; color: #000000; color: rgba(0, 0, 0, 0.85); -webkit-text-stroke: rgba(0, 0, 0, 0.85)}
-    p.p6 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; -webkit-text-stroke: #000000}
-    span.s1 {text-decoration: underline ; font-kerning: none}
-    span.s2 {font-kerning: none}
-    span.s3 {font-kerning: none; background-color: #b3b3b3}
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <title>RPS game</title>
 </head>
+
 <body>
-<h3 style="margin: 0.0px 0.0px 14.0px 0.0px; font: 14.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b>Game scores</b></span></h3>
-<p class="p2"><span class="s2"></span><br></p>
-<p class="p2"><span class="s2"></span><br></p>
-<p class="p2"><span class="s2"></span><br></p>
-<p class="p2"><span class="s2"></span><br></p>
-<p class="p2"><span class="s2"></span><br></p>
-<p class="p2"><span class="s2"></span><br></p>
-<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px Times; -webkit-text-stroke: #000000"><span class="s2"><b>Welcome to Rock Paper Scissors Game.</b></span></h1>
-<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px Times; -webkit-text-stroke: #000000"><span class="s2"><b>To play, click on your throw!</b></span></h1>
-<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px Times; color: #420178; -webkit-text-stroke: #0000e9"><span class="s1"><b>rock</b></span></h1>
-<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px Times; color: #420178; -webkit-text-stroke: #0000e9"><span class="s1"><b>paper</b></span></h1>
-<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px Times; color: #420178; -webkit-text-stroke: #0000e9"><span class="s1"><b>scissors</b></span></h1>
-<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px Times; -webkit-text-stroke: #000000"><span class="s2"><b>The Computer threw</b></span></h1>
-<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px Times; -webkit-text-stroke: #000000"><span class="s2"><b>Play First!</b></span></h1>
-<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px Times; -webkit-text-stroke: #000000"><span class="s2"><b>Game over! <br>
-You Won by 5 Points</b></span></h1>
-<p class="p5"><span class="s3">Replay</span></p>
-<h3 style="margin: 0.0px 0.0px 14.0px 0.0px; font: 14.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b>Game Summary</b></span></h3>
-<h3 style="margin: 0.0px 0.0px 14.0px 0.0px; font: 14.0px Times; -webkit-text-stroke: #000000"><span class="s2"><b>No game history yet</b></span></h3>
-<p class="p6"><span class="s2">You Won</span></p>
-<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px Times; -webkit-text-stroke: #000000; min-height: 29.0px"><span class="s2"><b></b></span><br></h1>
-<p class="p6"><span class="s2">Games</span></p>
-<p class="p6"><span class="s2">You Lost</span></p>
-<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px Times; -webkit-text-stroke: #000000; min-height: 29.0px"><span class="s2"><b></b></span><br></h1>
-<p class="p6"><span class="s2">Games</span></p>
+    <div class="wrapper-container"><!---------------------------------- the MAIN wrapper-container starts here -->
+        <div class="left-section">
+            <div class="left-card-top-div">
+                <h3><u>Game scores</u></h3>
+            </div>
+
+            <div class="left-score-boxes-div">
+                <div id="score-box0" class="score-box"></div>
+                <div id="score-box1" class="score-box"></div>
+                <div id="score-box2" class="score-box"></div>
+                <div id="score-box3" class="score-box"></div>
+                <div id="score-box4" class="score-box"></div>
+            </div>
+
+            <div id="points-div" class="points-div">
+                
+            </div>
+        </div>
+    
+        <div class="middle-section"><!--------------------------------- middle section of the wrapper-container starts here -->
+            <h1 class="welcome-text">Welcome to Rock Paper Scissors.</h1>
+            <h1 id="you-header-choice-header">To play, click on your throw!</h1>
+            <div class="choices-container"><!-------------------------- choices-container starts here -->
+    
+                <div id="choice-cards-div">
+                    <a id="rock" href="" onclick="playGameRock(event)">
+                        <div class="choice-box paper-div">
+                            <h1>rock</h1>
+                        </div>
+                    </a>
+                    
+                    <a id="paper" href="" onclick="playGamePaper(event)">
+                        <div class="choice-box paper-div">
+                            <h1>paper</h1>
+                        </div>
+                    </a>
+
+                    <a id="scissors" href="" onclick="playGameScissors(event)">
+                        <div class="choice-box rock-div">
+                            <h1>scissors</h1>
+                        </div>
+                    </a>
+                </div>
+             </div><!-----------------------------------------------------choices-container ends here -->
+    
+             <h1 class="no-show-div" id="computer-header-choice-header"> The Computer threw </h1>
+             <div class="no-show-div" id="computer-choice-div" class="choice-box">
+                <h1>Play First!</h1>
+             </div>
+
+             <div id="game-result-reveal" class="">
+                <h1 id="game-result-reveal-text">Game over! </br> You Won by 5 Points</h1>
+                <button id="replay-button" onclick="hideGameOver()">Replay</button>
+             </div>
+        </div><!---------------------------------------------------------- middle section of the wrapper-container starts here -->
+    
+        <div class="right-section">
+            <div class="right-card-top-div">
+                <h3><u>Game Summary</u></h3>
+                <h3 id="totalGames">No game history yet</h3>
+            </div>
+            <div class="right-card-lower-main-division">
+                <div class="right-card-lower-main-division-left-child">
+                    <div class="you-won-lost-colum-header">
+                        You Won
+                    </div>
+                    <div class="number-of-win-lose">
+                        <h1 id="wonGames"></h1>
+                    </div>
+
+                    <div class="you-won-lost-colum-footer">
+                        Games
+                    </div>
+                </div>
+
+                <div class="right-card-lower-main-division-right-child">
+                    <div class="you-won-lost-colum-header">
+                        You Lost
+                    </div>
+
+                    <div class="number-of-win-lose">
+                        <h1 id="lostGames"></h1>
+                    </div>
+
+                    <div class="you-won-lost-colum-footer">
+                        Games
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    
+    </div><!--------------------------------------------------------------- the MAIN wrapper-container ends here -->
+
+
+    <!-- the js link -->
+    <script src="file.js"></script>
 </body>
 </html>
