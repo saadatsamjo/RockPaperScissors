@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <title>RPS game</title>
+</head>
+
+<body>
+    <div class="wrapper-container"><!---------------------------------- the MAIN wrapper-container starts here -->
+        <div class="left-section">
+            <div class="left-card-top-div">
+                <h3><u>Game scores</u></h3>
+            </div>
+
+            <div class="left-score-boxes-div">
+                <div id="score-box0" class="score-box"></div>
+                <div id="score-box1" class="score-box"></div>
+                <div id="score-box2" class="score-box"></div>
+                <div id="score-box3" class="score-box"></div>
+                <div id="score-box4" class="score-box"></div>
+            </div>
+
+            <div id="points-div" class="points-div">
+                
+            </div>
+        </div>
+    
+        <div class="middle-section"><!--------------------------------- middle section of the wrapper-container starts here -->
+            <h1 class="welcome-text">Welcome to Rock Paper Scissors.</h1>
+            <h1 id="you-header-choice-header">To play, click on your throw!</h1>
+            <div class="choices-container"><!-------------------------- choices-container starts here -->
+    
+                <div id="choice-cards-div">
+                    <a id="rock" href="" onclick="playGameRock(event)">
+                        <div class="choice-box paper-div">
+                            <h1>rock</h1>
+                        </div>
+                    </a>
+                    
+                    <a id="paper" href="" onclick="playGamePaper(event)">
+                        <div class="choice-box paper-div">
+                            <h1>paper</h1>
+                        </div>
+                    </a>
+
+                    <a id="scissors" href="" onclick="playGameScissors(event)">
+                        <div class="choice-box rock-div">
+                            <h1>scissors</h1>
+                        </div>
+                    </a>
+                </div>
+             </div><!-----------------------------------------------------choices-container ends here -->
+    
+             <h1 class="no-show-div" id="computer-header-choice-header"> The Computer threw </h1>
+             <div class="no-show-div" id="computer-choice-div" class="choice-box">
+                <h1>Play First!</h1>
+             </div>
+
+             <div id="game-result-reveal" class="">
+                <h1 id="game-result-reveal-text">Game over! </br> You Won by 5 Points</h1>
+                <button id="replay-button" onclick="hideGameOver()">Replay</button>
+             </div>
+        </div><!---------------------------------------------------------- middle section of the wrapper-container starts here -->
+    
+        <div class="right-section">
+            <div class="right-card-top-div">
+                <h3><u>Game Summary</u></h3>
+                <h3 id="totalGames">No game history yet</h3>
+            </div>
+            <div class="right-card-lower-main-division">
+                <div class="right-card-lower-main-division-left-child">
+                    <div class="you-won-lost-colum-header">
+                        You Won
+                    </div>
+                    <div class="number-of-win-lose">
+                        <h1 id="wonGames"></h1>
+                    </div>
+
+                    <div class="you-won-lost-colum-footer">
+                        Games
+                    </div>
+                </div>
+
+                <div class="right-card-lower-main-division-right-child">
+                    <div class="you-won-lost-colum-header">
+                        You Lost
+                    </div>
+
+                    <div class="number-of-win-lose">
+                        <h1 id="lostGames"></h1>
+                    </div>
+
+                    <div class="you-won-lost-colum-footer">
+                        Games
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    
+    </div><!--------------------------------------------------------------- the MAIN wrapper-container ends here -->
+
+
+    <!-- the js link -->
+    <script src="file.js"></script>
+</body>
+</html>
